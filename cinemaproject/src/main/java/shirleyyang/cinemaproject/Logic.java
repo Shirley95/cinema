@@ -36,16 +36,10 @@ public class Logic {
 	}
 	
 	public int countGenre(String genre) {
-		int counter = 0;
-		for (Movie m : hmap.values()) {
-			if (m.getGenre().equals(genre)) {
-				counter++;
-			}				
-		}
-		return counter;
+		long counter = hmap.values().stream().filter(m -> m.getGenre().equals(genre)).count();
+		return (int) counter;
 	}
 
-	
 	
 	
 }
