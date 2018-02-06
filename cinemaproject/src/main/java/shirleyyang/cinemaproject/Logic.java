@@ -2,6 +2,7 @@ package shirleyyang.cinemaproject;
 
 import java.util.HashMap;
 
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -34,4 +35,18 @@ public class Logic {
 		}
 	}
 	
+	public int countGenre(String genre) {
+		int counter = 0;
+		for (Movie m : hmap.values()) {
+			if (m.getGenre().equals(genre)) {
+				counter++;
+			}				
+		}
+		return counter;
+	}
+
+	
+	
+	
 }
+
