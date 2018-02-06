@@ -15,6 +15,11 @@ public class Main {
 		System.out.println(l1.getMovie(1));
 		System.out.println(l1.getMovie(2));
 		System.out.println(l1.getMovie(3));
+		
+		System.out.println(l1.getMoviesAsJSON());
+		System.out.println(l1.getIndividualMovieAsJSON(1));
+		System.out.println(l1.getIndividualMovieAsJSON(2));
+		System.out.println(l1.getIndividualMovieAsJSON(3));
 	}
 
 }
